@@ -191,7 +191,8 @@ h1,h2,h3{
 .col-1-showcase video{
   width: 100%;
 }
-.sidebar{
+.sidebar,
+.second-sidebar{
   width: 100%;
   margin: 1em 0;
   padding: 1em;
@@ -349,34 +350,42 @@ h1,h2,h3{
     margin: 2em 0;
   }
   .sidebar{
-    width: 53%;
-    padding: 1em;
-    margin: 1em .5em 0;
-    float: left;
+    width: 100%;
   }
   .second-sidebar{
-    width: 40%;
-    margin: 1em .5em 0;
-    padding: 1em;
-    background-color: #f3f3f3;
+    width: 100%;
   }
 }
 @media (min-width: 48em){
   .col-1-showcase{
     width: 100%;
-    float: left;
   }
   .sidebar{
     width: 53%;
-    padding: 1em;
-    margin: 1em .5em 0;
     float: left;
+    margin: 1em 0 0 1em;
   }
   .second-sidebar{
     width: 40%;
-    margin: 1em .5em 0;
-    padding: 1em;
-    background-color: #f3f3f3;
+    float: right;
+    margin: 1em;
+  }
+}
+@media (min-width: 62em){
+  .col-1-showcase{
+    width: 62%;
+    float: left;
+    margin: 2em 0 0 1em;
+  }
+  .sidebar{
+    width: 33%;
+    float: right;
+    margin: 2em 1em 0;
+  }
+  .second-sidebar{
+    width: 33%;
+    float: right;
+    margin: 1em;
   }
 }
 /* 1st SECTION SCHOOL SHOWCASE */
@@ -486,6 +495,13 @@ h1,h2,h3{
   .school-info{
     grid-template-columns: repeat(3, 1fr);
   }
+}
+/****************************
+        ADMISSION PAGE
+*****************************/
+.admission-notes p{
+  padding: 1em 1.5em;
+  font-weight: 700;
 }
 /* FOOTER */
 .footer{
