@@ -25,11 +25,15 @@ video{
 }
 /* GLOBAL */
 h1{
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-bottom: .5em;
 }
 h1,h2,h3{
   font-family: 'Raleway', sans-serif;
+}
+a{
+  text-decoration: none;
+  color: black;
 }
 /* HEADER */
 .header{
@@ -62,7 +66,7 @@ h1,h2,h3{
 .navbar-nav li a{
   text-transform: uppercase;
   display: block;
-  color: rgb(255, 255, 255);
+  color: black;
   text-decoration: none;
   padding: 1em 1.75em;
 }
@@ -182,14 +186,24 @@ h1,h2,h3{
   margin: 0 auto;
   overflow: hidden;
 }
-.col-1-showcase{
+.col-1-showcase,
+.row-1-showcase{
   width: 100%;
-  margin: 1em 0;
+  margin: 1em 0 ;
   padding: 1em;
   background-color: #f3f3f3;
 }
 .col-1-showcase video{
   width: 100%;
+}
+.main-greets,
+.sidebar-greets{
+  width: 100%;
+  margin: 1em 0 1.5em;
+  background-color: #f3f3f3;
+}
+.sidebar-greet-text{
+  padding: 1em;
 }
 .sidebar,
 .second-sidebar{
@@ -227,13 +241,13 @@ h1,h2,h3{
   color: rgba(255, 0, 0, 0.822);
 }
 .sidebar-pdf-content{
-  margin: 1em 1em 0;
+  margin: 0 1em;
 }
 .sidebar-pdf-content a{
   color: black;
   text-decoration: none;
   font-weight: 900;
-  font-size: 1.125rem;
+  font-size: 1rem;
 }
 /* BUTTON | BUTTON STYLE */
 .btn {
@@ -344,6 +358,37 @@ h1,h2,h3{
 .bar-indicator:hover{
   background-color: orange;
 }
+/* GREETINGS CAROUSEL SLIDER */
+.greet-slides{
+  width: 100%;
+  border: 5px solid rgb(131, 2, 131);
+  overflow: hidden;
+  position: relative;
+}
+.greet-slider{
+  display: flex;
+  width: 100%;
+}
+/* GREETING CAROUSEL BUTTON */
+#prevBtn{
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  z-index: 10;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.801);
+  font-size: 3rem;
+}
+#nextBtn{
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  z-index: 10;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.801);
+  font-size: 3rem;
+}
+/* MAIN CONTENT BREAKPOINT */
 @media (min-width: 36em){
   .col-1-showcase{
     width: 100%;
@@ -373,19 +418,27 @@ h1,h2,h3{
 }
 @media (min-width: 62em){
   .col-1-showcase{
-    width: 62%;
+    width: 70%;
     float: left;
-    margin: 2em 0 0 1em;
+    margin: 2em 0 0 0;
   }
   .sidebar{
-    width: 33%;
+    width: 25%;
     float: right;
     margin: 2em 1em 0;
   }
   .second-sidebar{
-    width: 33%;
+    width: 25%;
     float: right;
     margin: 1em;
+  }
+  .main-greets{
+    float: left;
+    width: 55%;
+  }
+  .sidebar-greets{
+    float: right;
+    width: 40%;
   }
 }
 /* 1st SECTION SCHOOL SHOWCASE */
