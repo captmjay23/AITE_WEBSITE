@@ -43,12 +43,16 @@ a{
 }
 .branding{
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 .logo{
-  max-width: 100%;
-  padding: .5em;
+  padding: 1em;
+}
+.logo-1{
+  width: 150px;
+  margin-left: 50%;
+  transform: translateX(-50%);
 }
 .navbar{
   clear: both;
@@ -139,11 +143,6 @@ a{
   .burger-icon{
     display: none;
   }
-  .branding{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
   .navbar{
     clear: both;
     display: flex;
@@ -159,17 +158,31 @@ a{
   }
   .navbar-nav li a{
     color: black;
+    margin: 1em 0;
   }
   .dropdown{
     display: none; 
     position: absolute;
     background-color: #f3f3f3;
+    z-index: 999;
   }
   .dropdown li{
    display: block;
   }
   .navbar-nav li:hover .dropdown{
     display: block;
+  }
+}
+@media (min-width: 48em){
+  .branding{
+    flex-direction: row;
+  }
+  .logo{
+    max-width: 75%;
+  }
+  .logo-1{
+    margin-left: 0;
+    transform: translateX(0);
   }
 }
 /* HERO SECTION */
@@ -186,29 +199,19 @@ a{
   margin: 0 auto;
   overflow: hidden;
 }
-.col-1-showcase,
-.row-1-showcase{
+.col-1-showcase{
   width: 100%;
-  margin: 1em 0 ;
+  margin: 2em 0;
   padding: 1em;
   background-color: #f3f3f3;
 }
 .col-1-showcase video{
   width: 100%;
 }
-.main-greets,
-.sidebar-greets{
-  width: 100%;
-  margin: 1em 0 1.5em;
-  background-color: #f3f3f3;
-}
-.sidebar-greet-text{
-  padding: 1em;
-}
 .sidebar,
 .second-sidebar{
   width: 100%;
-  margin: 1em 0;
+  margin: 2em 0;
   padding: 1em;
   background-color: #f3f3f3;
 }
@@ -286,18 +289,14 @@ a{
 .carousel-item{
   display: flex;
   width: 100%;
+  animation-name: carousel-item-sliding;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
 }
 .carousel-inner h2{
   text-align: center;
   margin-top: 1.5em;
 }
-/* .carousel-item{
-  width: 500%;
-  animation-name: carousel-item-sliding;
-  animation-duration: 20s;
-  animation-iteration-count: infinite;
-} */
-
 /* CAROUSEL ANIMATION SLIDER */
 @keyframes carousel-item-sliding{
   16%{
@@ -322,32 +321,19 @@ a{
     margin-left: 0;
   }
 }
-/* GREETINGS CAROUSEL SLIDER */
-.greet-slides{
-  width: 100%;
-  border: 5px solid rgb(131, 2, 131);
-  overflow: hidden;
-  position: relative;
-}
-.greet-slider{
-  display: flex;
-  width: 100%;
-}
-/* COVID & GREETING CAROUSEL BUTTON */
-#prevBtn,
+/* COVID CAROUSEL BUTTON */
 #covid-prevBtn{
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 5%;
   z-index: 10;
   cursor: pointer;
   color: orange;
   font-size: 3rem;
 }
-#nextBtn,
 #covid-nextBtn{
   position: absolute;
-  top: 50%;
+  top: 60%;
   right: 5%;
   z-index: 10;
   cursor: pointer;
@@ -359,52 +345,46 @@ a{
   .col-1-showcase{
     width: 100%;
     margin: 2em 0;
+    padding: 1em;
   }
   .sidebar{
     width: 100%;
   }
   .second-sidebar{
-    width: 100%;
+    width: 100%;   
   }
 }
 @media (min-width: 48em){
   .col-1-showcase{
     width: 100%;
+    margin: 2em 0;
   }
   .sidebar{
-    width: 53%;
+    width: 55%;
     float: left;
-    margin: 1em 0 0 1em;
+    margin: 0 0 0 1em;
   }
   .second-sidebar{
     width: 40%;
     float: right;
-    margin: 1em;
+    margin: 0 1em 0 0;
   }
 }
 @media (min-width: 62em){
   .col-1-showcase{
-    width: 70%;
+    width: 65%;
     float: left;
-    margin: 2em 0 0 0;
+    margin: 2em 0 1em 1em;
   }
   .sidebar{
-    width: 25%;
+    width: 30%;
     float: right;
-    margin: 2em 1em 0;
+    margin: 2em 1em 0 0;
   }
   .second-sidebar{
-    width: 25%;
+    width: 30%;
     float: right;
-    margin: 1em;
-  }
-  .main-greets{
-    float: left;
-    width: 55%;
-  }
-  .sidebar-greets{
-    float: right;
-    width: 40%;
+    margin: 2em 1em 1em 0;
   }
 }
 /* 1st SECTION SCHOOL SHOWCASE */
@@ -518,9 +498,44 @@ a{
 /****************************
         ADMISSION PAGE
 *****************************/
+.admission-content h3{
+  margin-top: 1em;
+}
+.admission-notes{
+  margin: 1em 0;
+}
 .admission-notes p{
   padding: 1em 1.5em;
   font-weight: 700;
+}
+.related-news h3,
+.related-news-text h4{
+  margin: 0 0 1em;
+}
+.related-news-content{
+  margin: 1em 0 2em;
+  border-bottom: 2px solid #3d3d3d;
+}
+.related-news-content img{
+  width: 100%;
+}
+.related-news-text{
+  margin: 1em 1em;
+}
+@media (min-width: 62em){
+  .related-news-content{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+  .related-news-content img{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+  }
+  .related-news-text{
+    width: 60%;
+  }
 }
 /* FOOTER */
 .footer{
