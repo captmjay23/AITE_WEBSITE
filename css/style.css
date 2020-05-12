@@ -278,41 +278,26 @@ a{
   }
 }
 /* CAROUSEL IMG SLIDER */
-.slider{
-  max-width: 100%;
-  overflow: hidden;
+.carousel-inner{
+  width: 100%;
   position: relative;
-  margin-top: 2em;
-}
-.slider h2{
-  text-align: center;
-  margin-bottom: .5em;
+  overflow: hidden;
 }
 .carousel-item{
+  display: flex;
+  width: 100%;
+}
+.carousel-inner h2{
+  text-align: center;
+  margin-top: 1.5em;
+}
+/* .carousel-item{
   width: 500%;
   animation-name: carousel-item-sliding;
   animation-duration: 20s;
   animation-iteration-count: infinite;
-}
-.carousel-item img{
-  width: 20%;
-  float: left;
-}
-#image-1:checked ~ .carousel-item .img-1{
-  margin-left: 0;
-}
-#image-2:checked ~ .carousel-item .img-2{
-  margin-left: -20%;
-}
-#image-3:checked ~ .carousel-item .img-3{
-  margin-left: -40%;
-}
-#image-4:checked ~ .carousel-item .img-4{
-  margin-left: -60%;
-}
-#image-5:checked ~ .carousel-item .img-5{
-  margin-left: -80%;
-}
+} */
+
 /* CAROUSEL ANIMATION SLIDER */
 @keyframes carousel-item-sliding{
   16%{
@@ -337,27 +322,6 @@ a{
     margin-left: 0;
   }
 }
-/* CAROUSEL INDICATORS/BAR/ RADIO BUTTON */
-.radio{
-  display: none;
-}
-.carousel-indicator{
-  display: flex;
-  position: absolute;
-  margin-left: 50%;
-  transform: translateX(-50%);
-  margin-top: 72%;
-}
-.bar-indicator{
-  width: 2em;
-  height: 6px;
-  margin: 0 3px;
-  background-color: rgba(255, 166, 0, 0.582);
-  cursor: pointer;
-}
-.bar-indicator:hover{
-  background-color: orange;
-}
 /* GREETINGS CAROUSEL SLIDER */
 .greet-slides{
   width: 100%;
@@ -369,23 +333,25 @@ a{
   display: flex;
   width: 100%;
 }
-/* GREETING CAROUSEL BUTTON */
-#prevBtn{
+/* COVID & GREETING CAROUSEL BUTTON */
+#prevBtn,
+#covid-prevBtn{
   position: absolute;
   top: 50%;
   left: 5%;
   z-index: 10;
   cursor: pointer;
-  color: rgba(255, 255, 255, 0.801);
+  color: orange;
   font-size: 3rem;
 }
-#nextBtn{
+#nextBtn,
+#covid-nextBtn{
   position: absolute;
   top: 50%;
   right: 5%;
   z-index: 10;
   cursor: pointer;
-  color: rgba(255, 255, 255, 0.801);
+  color: orange;
   font-size: 3rem;
 }
 /* MAIN CONTENT BREAKPOINT */
