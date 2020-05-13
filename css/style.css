@@ -542,10 +542,18 @@ a{
 ************************/
 .aite-logo-text{
   margin: 2em 0;
+  position: relative;
 }
 .aite-logo-text p{
   padding: 1em;
   line-height: 2;
+}
+.aite-logo-text img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: .2;
 }
 /* FOOTER */
 .footer{
