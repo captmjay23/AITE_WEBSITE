@@ -73,9 +73,20 @@ a{
   color: black;
   text-decoration: none;
   padding: 1em 1.75em;
+  position: relative;
 }
-.navbar-nav li a:hover{
-  background-color: rgba(136, 136, 136, 0.541);
+.navbar-nav li .nav-link::before{
+  content: '';
+  width: 0;
+  height: 5px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color:  rgba(255, 166, 0, 0.801);
+  transition: all .5s ease-in-out;
+}
+.navbar-nav li:hover a::before{
+  width: 100%;
 }
 .dropdown{
   display: none;
