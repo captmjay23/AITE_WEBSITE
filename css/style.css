@@ -62,7 +62,9 @@ a{
 }
 .navbar-nav{
   list-style-type: none;
-  display: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .5s ease-in;
 }
 .navbar-nav li{
   display: block;
@@ -136,7 +138,7 @@ a{
 }
 /* NAVIGATION BUTTON EFFECT WHEN CLICK */
 #burger-menu:checked ~ .navbar .navbar-nav{
-  display: block;
+  max-height: 400px;
 }
 #burger-menu:checked ~ .burger-icon .nav-icon{
   background: transparent;
@@ -163,6 +165,7 @@ a{
   .navbar-nav{
     list-style-type: none;
     display: block;
+    max-height: 200px;
   }
   .navbar-nav li{
     display: inline-block;
